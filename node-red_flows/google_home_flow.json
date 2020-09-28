@@ -1,0 +1,74 @@
+[
+  {
+    "id": "b2240e70.96843",
+    "type": "tab",
+    "label": "Google Home Flow",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "9ef7a038.f92d",
+    "type": "nora-switch",
+    "z": "b2240e70.96843",
+    "devicename": "LED",
+    "roomhint": "",
+    "name": "",
+    "passthru": false,
+    "nora": "2d637120.60794e",
+    "topic": "",
+    "onvalue": "LIGAR",
+    "onvalueType": "str",
+    "offvalue": "DESLIGAR",
+    "offvalueType": "str",
+    "x": 440,
+    "y": 340,
+    "wires": [
+      [
+        "d7242d9e.e9011"
+      ]
+    ]
+  },
+  {
+    "id": "d7242d9e.e9011",
+    "type": "mqtt out",
+    "z": "b2240e70.96843",
+    "name": "",
+    "topic": "teste",
+    "qos": "",
+    "retain": "",
+    "broker": "2c00a437.7d4abc",
+    "x": 620,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "2d637120.60794e",
+    "type": "nora-config",
+    "z": "",
+    "name": "nora config",
+    "group": "",
+    "notify": false
+  },
+  {
+    "id": "2c00a437.7d4abc",
+    "type": "mqtt-broker",
+    "z": "",
+    "name": "Mosquitto_Raspberry",
+    "broker": "iribarrem.ddns.net",
+    "port": "1883",
+    "clientid": "node-red",
+    "usetls": false,
+    "compatmode": false,
+    "keepalive": "60",
+    "cleansession": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthPayload": "",
+    "closeTopic": "",
+    "closeQos": "0",
+    "closePayload": "",
+    "willTopic": "",
+    "willQos": "0",
+    "willPayload": ""
+  }
+]
